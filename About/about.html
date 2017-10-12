@@ -17,11 +17,29 @@
   <!-- Custom styles for this template -->
   <link href="./css/justified-nav.css" rel="stylesheet">
 
+  <script>
+    jQuery(function($) {
+            $("body").css("display", "none");
+            $("body").fadeIn(2000);
+            $("a.transition").click(function(event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+  </script>
+
 </head>
 <body>
 
-  <div>
-    <a href="./test" download>test</a>
+  <div class="jumbotron">
+    <p class="lead">Trust in DIMIGO.</p>
+    <br>
+    <p class="lead">
   </div>
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
